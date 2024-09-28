@@ -1,0 +1,21 @@
+VAR 
+    arr = [] 
+    n = length of arr
+    current 
+    j 
+
+BEGIN
+    FOR i FROM 1 TO n - 1 DO
+        current = arr[i] 
+        j = i - 1 
+        
+        WHILE j >= 0 AND arr[j] > current DO
+            arr[j + 1] = arr[j] 
+            j = j - 1
+        ENDWHILE
+        
+        arr[j + 1] = current 
+    ENDFOR
+
+    RETURN arr
+END
